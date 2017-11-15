@@ -78,7 +78,7 @@
   // successful.  See statusChangeCallback() for when this call is made.
   function testAPI() {
     console.log('Welcome!  Fetching your information.... ');
-    FB.api('/me', {fields: 'name,email'}, function(response) {
+    FB.api('/me', {fields: 'name,first_name,last_name,email,birthday'}, function(response) {
         $('#first_name').val(response.name);
         $('#last_name').val(response.last_name);
         $('#email').val(response.email);
@@ -163,7 +163,7 @@
   <div class="col-md-4 inputGroupContainer">
   <div class="input-group">
   <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
-  <input id="user_name" name="user_name" placeholder="Username" class="form-control"  type="text">
+  <input id="username" name="user_name" placeholder="Username" class="form-control"  type="text">
     </div>
   </div>
 </div>
